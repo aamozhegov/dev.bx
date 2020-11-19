@@ -1,9 +1,12 @@
 <?php
 
-function readFromConsole($message = 'Введите что-нибудь ', $user_input)
+function readFromConsole($message='Введите что-нибудь', $user_input=null)
 {
-	echo $message;
-	$user_input = trim(fgets(STDIN));
+	if ($user_input === null) {
+		echo $message.PHP_EOL;
+		$user_input = trim(fgets(STDIN));
+	}
+
 	if ($user_input === 'true') {
 		$result = boolval($user_input);
 	}
@@ -16,12 +19,11 @@ function readFromConsole($message = 'Введите что-нибудь ', $user
 	elseif (is_int($user_input)) {
 		$result = intval($user_input);
 	}
-	else {
-		$result = null;
-	}
 	echo $result;
 	return $result;
 }
+
+readFromConsole();
 
 
 
