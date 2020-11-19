@@ -1,22 +1,28 @@
 <?php
 
-function readFromConsole()
+function readFromConsole($message = 'Введите что-нибудь ', $user_input)
 {
-	$summa = null;
-	$counter = 1;
-	echo("Программа складывает числа пока не получен '0' или не нажат 'ENTER'\n");
-	for (; ;)
-	{
-		echo('Введите число '.$counter.': ');
-		$input = fgets(STDIN);
-		$counter ++;
-		if ($input == 0)
-		{
-			echo 'Сумма введенных чисел равна '.($summa);
-			break;
-		}
-		$summa += $input;
+	echo $message;
+	$user_input = trim(fgets(STDIN));
+	if ($user_input === 'true') {
+		$result = boolval($user_input);
 	}
+	elseif (is_string($user_input)) {
+		$result = strval($user_input);
+	}
+	elseif (is_float($user_input)) {
+		$result = float($user_input);
+	}
+	elseif (is_int($user_input)) {
+		$result = intval($user_input);
+	}
+	else {
+		$result = null;
+	}
+	echo $result;
+	return $result;
 }
 
-readFromConsole();
+
+
+
