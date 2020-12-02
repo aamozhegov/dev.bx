@@ -36,7 +36,3 @@ class Rook extends ChessPiece {
 	}
 }
 
-
-$rook1 = new Rook();
-
-$rook1->checker('1 2 3 4');
