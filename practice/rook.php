@@ -1,31 +1,42 @@
 <?php
-/*
-li = [int(input()) for i in range(4)]
-if li[0] == li[2] or li[1] == li[3]:
-	print("YES")
-else:
-	print("NO")
-*/
 
-class Rook {
+class ChessPiece {
+	 protected $name;
+	 protected $moveToDestination = false;
+	 protected $arr = array();
 
-	function inputToArray()
+	 function getName() {
+	 	return $this->name;
+	 }
+
+	 function __get($name) {
+		 echo 'Chess piece '. $name .PHP_EOL;
+		 return $this->name;
+	 }
+
+	function inputToArray($string)
 	{
 		echo 'Введите координаты шахматных клеток: '.PHP_EOL;
-		$arr = preg_split('/[\s,]+/', trim(fgets(STDIN)));
-	}
-
-	function checker($arr) {
-		if (($arr[0] == $arr[2]) || ($arr[1] == $arr[3])) {
-			$message = 'ДА';
-		}
-		else {
-			$message = 'НЕТ';
-		}
-		return $message;
+		$arr = preg_split('/[\s,]+/', $string);
 	}
 }
 
-$rookOne = new Rook;
+class Rook extends ChessPiece {
 
-var_dump($rookOne);
+	function checker($arr)
+	{
+		if (($arr[0] == $arr[2]) || ($arr[1] == $arr[3]))
+		{
+			$moveToDestination = true;
+		}
+		else
+		{
+			$moveToDestination = false;
+		}
+	}
+}
+
+
+$rook1 = new Rook();
+
+$rook1->checker('1 2 3 4');
