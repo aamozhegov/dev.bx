@@ -27,7 +27,11 @@ class calcTest extends TestCase {
 
 	public function testSqr(): void {
 		$calculator = new Calculator();
+		$this->expectException(\InvalidArgumentException::class);
+		$this->expectExceptionMessage("Error!");
 		self::assertEquals(4, $calculator->sqr(16));
+		self::assertEquals(1, $calculator->sqr(1));
+		self::assertEquals(0, $calculator->sqr(0));
 	}
 
 	public function testExponentiation(): void {
