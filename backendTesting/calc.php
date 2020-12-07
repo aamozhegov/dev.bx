@@ -20,7 +20,7 @@ class Calculator {
 		return $a / $b;
 	}
 
-	public function sqr(int $a, int $b): int {
+	public function sqr(int $a, int $b): float {
 		if ($a < 0) {
 			throw new \InvalidArgumentException("Error!");
 		}
