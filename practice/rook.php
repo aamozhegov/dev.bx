@@ -1,38 +1,39 @@
 <?php
+/*
+li = [int(input()) for i in range(4)]
+if li[0] == li[2] or li[1] == li[3]:
+	print("YES")
+else:
+	print("NO")
+*/
 
-class ChessPiece {
-	 protected $name;
-	 protected $moveToDestination = false;
-	 protected $arr = array();
+class Rook {
+	private $inp;
 
-	 function getName() {
-	 	return $this->name;
-	 }
+	function __construct($inp) {
+		$this->inp = $inp;
+	}
 
-	 function __get($name) {
-		 echo 'Chess piece '. $name .PHP_EOL;
-		 return $this->name;
-	 }
-
-	function inputToArray($string)
+	function inputToArray($inp)
 	{
-		echo 'Введите координаты шахматных клеток: '.PHP_EOL;
-		$arr = preg_split('/[\s,]+/', $string);
+		if ($inp == null) {
+			echo 'Введите координаты шахматных клеток: '.PHP_EOL;
+			$arr = preg_split('/[\s,]+/', trim(fgets(STDIN)));
+		}
+		$arr = preg_split('/[\s,]+/', trim(fgets(STDIN)));
+	}
+
+	function checker($arr) {
+		if (($arr[0] == $arr[2]) || ($arr[1] == $arr[3])) {
+			$message = 'ДА';
+		}
+		else {
+			$message = 'НЕТ';
+		}
+		return $message;
 	}
 }
 
-class Rook extends ChessPiece {
+$rookOne = new Rook;
 
-	function checker($arr)
-	{
-		if (($arr[0] == $arr[2]) || ($arr[1] == $arr[3]))
-		{
-			$moveToDestination = true;
-		}
-		else
-		{
-			$moveToDestination = false;
-		}
-	}
-}
-
+var_dump($rookOne);
