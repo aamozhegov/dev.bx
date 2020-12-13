@@ -1,13 +1,15 @@
 <?php
-echo 'Введите последовательность натуральных чисел, разделённых пробелом или запятой:'.PHP_EOL;
-$userInput = trim(fgets(STDIN));
 
 function arrayPractice($userInput) {
+	if ($userInput == null) {
+		echo 'Введите последовательность натуральных чисел, разделённых пробелом или запятой:'.PHP_EOL;
+		$userInput = trim(fgets(STDIN));
+	}
 	$arr = array_diff((preg_split('/[\s,]+/',$userInput)), array('stop'));
-	echo count(array_keys($arr, max($arr))).PHP_EOL;
+	return(count(array_keys($arr, max($arr)))).PHP_EOL;
 };
 
-arrayPractice($userInput);
+echo arrayPractice($userInput);
 
 /*
 $arr = array();
