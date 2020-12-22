@@ -2,26 +2,30 @@
 
 function parse_paths_of_files($path)
 {
-	$result = array();
-
-	foreach ($path as $value)
+	if ($currentDir = opendir($path))
 	{
-		$parts = explode('/', $value);
-		$current = &$result;
-		for ($i = 1, $max = count($parts); $i < $max; $i++)
-		{
-			if (!isset($current[$parts[$i-1]]))
+		$list = [
+			'dirs' => [],
+			'files' => []
+		];
+		while (false !== ($element = readdir($currentDir))) {
+			if (in_array($element, ['.', '..']))
 			{
-				$current[$parts[$i-1]] = array();
+				continue;
 			}
-			$current = &$current[$parts[$i-1]];
+			if (is_dir($path.$element)) {
+				$list['dirs'][$element]['is_readable'] =
+					(is_readable($path.$element) == true ? 'true' : 'false');
+				$list['dirs'][$element]['is_writable'] =
+					(is_writable($input.$element) == true ? 'true' : 'false');
+				$list['files'][$element]['filesize'] = filesize($path.$element);
+			}
 		}
-		$current[] = $parts[$i];
+		closedir($currentDir);
+		return $list;
+	}
+	else {
+		echo 'В директории не содержится папок или ввдн неверный путь';
 	}
 
-	return $result;
 }
-
-// $p = "C:/Users/Documents/Folder/Subfolder/";
-
-// print_r(parse_paths_of_files(array($p)));
