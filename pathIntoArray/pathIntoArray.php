@@ -17,7 +17,7 @@ function parse_paths_of_files($path)
 				$list['dirs'][$element]['is_readable'] =
 					(is_readable($path.$element) == true ? 'true' : 'false');
 				$list['dirs'][$element]['is_writable'] =
-					(is_writable($input.$element) == true ? 'true' : 'false');
+					(is_writable($path.$element) == true ? 'true' : 'false');
 				$list['files'][$element]['filesize'] = filesize($path.$element);
 			}
 		}
@@ -25,7 +25,7 @@ function parse_paths_of_files($path)
 		return $list;
 	}
 	else {
-		echo 'В директории не содержится папок или ввдн неверный путь';
+		echo 'В директории не содержится папок или введён неверный путь';
 	}
 
 }
