@@ -1,0 +1,70 @@
+.row > div {
+	outline: 1px dashed red;
+}
+
+header {
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+}
+
+.logo {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	font-height: 28px;
+	text-align: center;
+	text-transform: uppercase;
+	color: yellow;
+}
+
+.nav {
+
+}
+
+
+.nav-link {
+}
+
+.banner {
+	min-height: 100vh;
+	min-width: 100%;
+	background: url(images/moto.png) no-repeat center;
+	background-size: cover;
+}
+
+/* region banner */
+
+.banner {
+	position: relative;
+}
+
+.banner-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.46);
+	z-index: 10;
+
+}
+
+.banner-content {
+	position: relative;
+	z-index: 20;
+}
+
+/*endregion*/
+
+.custom_card {
+	border: none;
+	border-radius: 0;
+}
+
+.custom_card .card-body {
+	padding: 16px 0;
+}
