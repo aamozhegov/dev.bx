@@ -1,5 +1,4 @@
 <?php
-
 function parse_paths_of_files($path)
 {
 	if ($currentDir = opendir($path))
