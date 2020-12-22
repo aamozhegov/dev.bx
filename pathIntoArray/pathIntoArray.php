@@ -28,4 +28,4 @@ function parse_paths_of_files($path)
 		echo 'В директории нет содержимого или введён неверный путь';
 	}
 
-};
+}
