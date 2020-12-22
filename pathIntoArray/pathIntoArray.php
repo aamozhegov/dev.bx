@@ -15,9 +15,9 @@ function parse_paths_of_files($path)
 			}
 			if (is_dir($path.$element)) {
 				$list['dirs'][$element]['is_readable'] =
-					(is_readable($path.$element) == true ? 'True' : 'False');
+					(is_readable($path.$element) == true ? 'true' : 'false');
 				$list['dirs'][$element]['is_writable'] =
-					(is_writable($path.$element) == true ? 'True' : 'False');
+					(is_writable($path.$element) == true ? 'true' : 'false');
 				$list['files'][$element]['filesize'] = filesize($path.$element);
 			}
 		}
@@ -25,7 +25,7 @@ function parse_paths_of_files($path)
 		return $list;
 	}
 	else {
-		echo 'В директории не содержится папок или введён неверный путь';
+		echo 'В директории нет содержимого или введён неверный путь';
 	}
 
-}
+};
