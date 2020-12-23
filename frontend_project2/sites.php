@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="../CSS/style.css">
+<link rel="stylesheet" href="styles.css">
 <div class="container-fluid  bg-warning" style="height: 266px">
 	<div class="container" >
     <div class="row justify-content-center">
