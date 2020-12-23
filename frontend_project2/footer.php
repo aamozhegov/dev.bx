@@ -27,17 +27,17 @@
 			</div>
 			<div class="col-2 mt-5 pt-5">
 				<div class="space"></div>
-				<p class="bold">Features</p>
-				<p class="normal">Features</p>
-				<p class="normal">Features</p>
-				<p class="normal">Features</p>
+				<p class="bold">Resources</p>
+				<p class="normal">Resources</p>
+				<p class="normal">Resources</p>
+				<p class="normal">Resources</p>
 			</div>
 			<div class="col-2 mt-5 pt-5">
 				<div class="space"></div>
-				<p class="bold">Features</p>
-				<p class="normal">Features</p>
-				<p class="normal">Features</p>
-				<p class="normal">Features</p>
+				<p class="bold">Company</p>
+				<p class="normal">Company</p>
+				<p class="normal">Company</p>
+				<p class="normal">Company</p>
 			</div>
 		</div>
 	</div>
