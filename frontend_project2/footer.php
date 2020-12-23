@@ -8,6 +8,36 @@
 				<div class="space">
 				</div>
 				<p class="logo text-left"> TRADE</p>
+				<p>© 2010 — 2020</p>
+				<p>Privacy — Terms</p>
+			</div>
+			<div class="col-2 mt-5 pt-5">
+				<div class="space>"></div>
+				<p class="bold">Product</p>
+				<p class="normal">Product</p>
+				<p class="normal">Product</p>
+				<p class="normal">Product</p>
+			</div>
+			<div class="col-2 mt-5 pt-5">
+				<div class="space"></div>
+				<p class="bold">Features</p>
+				<p class="normal">Features</p>
+				<p class="normal">Features</p>
+				<p class="normal">Features</p>
+			</div>
+			<div class="col-2 mt-5 pt-5">
+				<div class="space"></div>
+				<p class="bold">Features</p>
+				<p class="normal">Features</p>
+				<p class="normal">Features</p>
+				<p class="normal">Features</p>
+			</div>
+			<div class="col-2 mt-5 pt-5">
+				<div class="space"></div>
+				<p class="bold">Features</p>
+				<p class="normal">Features</p>
+				<p class="normal">Features</p>
+				<p class="normal">Features</p>
 			</div>
 		</div>
 	</div>
