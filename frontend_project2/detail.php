@@ -33,7 +33,7 @@
 				<div class="space"></div>
 			</div>
 			<div class="col-sm-4">
-				<img src="images/moto4.png" class="rounded" alt="4">
+				<img src="images/moto4.jpg" class="rounded" alt="4">
 			</div>
 		</div>
 	</div>
