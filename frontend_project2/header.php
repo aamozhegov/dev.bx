@@ -19,10 +19,9 @@
 <div class="wrap">
 
 
-
-
-	<header class="container-fluid">
-		<div class="row">
+<header>
+	<div class="container-fluid">
+		<div class="row" style="height: 64px;">
 			<div class="col">
 				<div class="nav">
 					<a href="" class="nav-link">link1</a>
@@ -38,10 +37,11 @@
 			</div>
 
 			<div class="col text-right">
-				<a href="" class="btn btn-sm btn-warning">FREE TRIAL</div>
+				<a href="" class="btn btn-sm btn-warning">FREE TRIAL
+			</div>
 		</div>
 
-</div>
+	</div>
 
 </header>
 
