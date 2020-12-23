@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	<title>homePage</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php include 'header.php'; ?>
@@ -40,7 +40,7 @@
 				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
 		<div class="col-sm-5">
-			<img src="images/moto4.png" alt="moto4" class="rounded">
+			<img src="images/moto4.jpg" alt="moto4" class="rounded">
 		</div>
 	</div>
 </div>
